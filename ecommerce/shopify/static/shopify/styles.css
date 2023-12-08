@@ -16,8 +16,14 @@ body {
     color: var(--color1);
 }
 main {
-    padding: 0 8%;
-    
+    padding: 0 8%; 
+}
+a {
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
 }
 
 /*NAVIGATON BAR*/

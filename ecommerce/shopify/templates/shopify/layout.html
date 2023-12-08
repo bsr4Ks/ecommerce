@@ -16,7 +16,7 @@
     <header>
         <nav>
             <ul>
-                <li class="logo">Shopify</li>
+                <a href="{% url 'index' %}"><li class="logo">Shopify</li></a>
                 {% if user.is_authenticated %}
                 <li>Head1</li>
                 <li>Head2</li>
