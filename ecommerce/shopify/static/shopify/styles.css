@@ -1,0 +1,41 @@
+:root {
+    --color1: #2B2A4C;
+    --color2: #B31312;
+    --color3: #EA906C;
+    --color4: #EEE2DE;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background-color: var(--color4);
+    color: var(--color1);
+}
+main {
+    padding: 0 8%;
+    
+}
+
+/*NAVIGATON BAR*/
+nav {
+    padding: 20px 6%;
+    margin-bottom: 20px;
+    border-bottom: 2px solid black;
+    background-color: var(--color1);
+    color: var(--color3);
+}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--color4);
+}
