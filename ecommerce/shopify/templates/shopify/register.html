@@ -4,13 +4,17 @@
 
 {% block main %}
     <h1>Register</h1>
-    <div class="center"> 
+    <div class="center">
         <form class="form login-form" action="" method="post">
             {% csrf_token %}
-            <input class="input" type="text", name="username", placeholder="Username" autocomplete="off">
-            <input class="input" type="password", name="password", placeholder="Password" autocomplete="off">
-            <input class="input" type="password", name="password", placeholder="Password (Again)" autocomplete="off">
-            <input class="submit login-submit" type="submit", value="Register">
+            {{ form.username }}
+            {{ form.password1 }}
+            {{ form.password2 }}
+            <input class="submit login-submit" type="submit" , value="Register">
         </form>
     </div>
+    <div class="center" style="margin-top: 20px;">
+        <p>Already have an account? <a href="{% url 'login' %}">Log in</a>
+    </div>
+
 {% endblock %}

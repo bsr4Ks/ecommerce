@@ -7,9 +7,12 @@
     <div class="center"> 
         <form class="form login-form" action="" method="post">
             {% csrf_token %}
-            <input class="input" type="text", name="username", placeholder="Username" autocomplete="off">
-            <input class="input" type="password", name="password", placeholder="Password" autocomplete="off">
+            {{ form.username }}
+            {{ form.password }}
             <input class="submit login-submit" type="submit", value="Login">
         </form>
+    </div>
+    <div class="center" style="margin-top: 20px;">
+        <p>Don't have an account? <a href="{% url 'register' %}">Register</a>
     </div>
 {% endblock %}

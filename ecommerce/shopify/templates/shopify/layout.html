@@ -21,21 +21,27 @@
     <header>
         <nav>
             <ul>
-                <a href="{% url 'index' %}">
-                    <li class="logo">Shopify <i class="fa-brands fa-opencart"></i></li>
-                </a>
+                <div class="center">
+                    <a href="{% url 'index' %}">
+                        <li class="logo">Shopify <i class="fa-brands fa-opencart"></i></li>
+                    </a>
                 {% if user.is_authenticated %}
-                <li>Head1</li>
-                <li>Head2</li>
-                <li>Head3</li>
-                <div>
+                    <li>Head1</li>
+                    <li>Head2</li>
+                    <li>Head3</li>
+                </div>
+                <div class="center">
                     <li>Settings</li>
-                    <li>Logout</li>
+                    <a href="{% url 'logout' %}"><li>Logout</li></a>
                 </div>
                 {% else %}
-                <div>
+                </div>
+                <div class="center">
                     <a href="{% url 'register' %}">
                         <li>Register</li>
+                    </a>
+                    <a href="{% url 'login' %}">
+                        <li>Log in</li>
                     </a>
                 </div>
                 {% endif %}
@@ -43,9 +49,15 @@
         </nav>
     </header>
     <main>
+        {% if message %}
+        <ul class="messages">
+            <li {% if message_tag %} class="{{ message_tag }}"{% endif %}>{{ message }}</li>
+        </ul>
+        {% endif %}
         {% block main %}
         {% endblock %}
     </main>
+    <script src="{% static 'shopify/script.js' %}"></script>
 </body>
 
 </html>
